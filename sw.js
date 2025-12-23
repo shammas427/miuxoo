@@ -35,3 +35,38 @@ askBtn.addEventListener('click', async () => {
         aiInput.value = "";
     }
 });
+
+<script type="module">
+  import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
+
+  // Replace with your actual key from https://aistudio.google.com/
+  const API_KEY = "AIzaSyCKsxEPHYk1HJLLI5UC1mriFQlL7eFPC2U"; 
+  const genAI = new GoogleGenerativeAI(API_KEY);
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+  const sendBtn = document.getElementById('send-ai-btn');
+  const chatBox = document.getElementById('ai-chat-box');
+  const userInput = document.getElementById('user-input');
+
+  sendBtn.addEventListener('click', async () => {
+    const text = userInput.value;
+    if (!text) return;
+
+    chatBox.innerHTML += `<p><strong>You:</strong> ${text}</p>`;
+    userInput.value = "";
+    
+    const loadingMsg = document.createElement('p');
+    loadingMsg.innerHTML = "<strong>Gemini:</strong> Thinking...";
+    chatBox.appendChild(loadingMsg);
+
+    try {
+      const result = await model.generateContent(text);
+      const response = await result.response;
+      loadingMsg.innerHTML = `<strong>Gemini:</strong> ${response.text()}`;
+    } catch (error) {
+      console.error(error); // This helps you find the error in F12 Developer Tools
+      loadingMsg.innerHTML = "<strong>Gemini:</strong> Connection failed. Please check if your API Key is correct and active.";
+    }
+    chatBox.scrollTop = chatBox.scrollHeight;
+  });
+</script>
