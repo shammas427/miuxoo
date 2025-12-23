@@ -8,6 +8,12 @@ A lightweight, high-performance "Single Page Application" (SPA) template featuri
 ## 📺 Connect with Me
 Check out my YouTube channel for project walkthroughs: [@aimiuxo](https://www.youtube.com/@aimiuxo)
 
+# 🚀 Miuxoo PWA
+**Live Site:** [https://miuxo.in](https://miuxo.in)
+
+[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://miuxo.in)
+[![YouTube](https://img.shields.io/badge/YouTube-@aimiuxo-red.svg)](https://www.youtube.com/@aimiuxo)
+
 ## ✨ Key Features
 
 - **🌙 Smart Dark Mode:** Automatically detects and saves user preference using CSS Variables.
