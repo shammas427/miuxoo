@@ -12,6 +12,8 @@ A lightweight, high-performance "Single Page Application" (SPA) template featuri
 [![Instagram](https://img.shields.io/badge/Instagram-@aimiuxo-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/aimiuxo/)
 [![YouTube](https://img.shields.io/badge/YouTube-@aimiuxo-red?style=flat&logo=youtube&logoColor=white)](https://www.youtube.com/@aimiuxo)
 
+[![AI Integrated](https://img.shields.io/badge/AI-Integrated-brightgreen?style=flat&logo=openai&logoColor=white)](https://miuxo.in)
+
 A lightweight, high-performance Progressive Web App featuring theme persistence, data storage, and mobile installation.
 
 [![Live Demo](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://miuxo.in)
