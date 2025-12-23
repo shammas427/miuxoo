@@ -70,19 +70,26 @@
 <body>
 
 <div class="card">
-    <h3>Contact Me</h3>
-    <form action="https://api.web3forms.com/submit" method="POST">
-        
-        <input type="hidden" name="access_key" value="b1c31134-8e32-4c8a-bdeb-b86ba06e5495">
-        
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-        
-        <input type="hidden" name="from_name" value="Miuxoo App User">
-        <input type="hidden" name="subject" value="New Message from Miuxoo App">
+    <h3>MIUXO</h3>
+    <p>Visit us at our custom domain</p>
+    <a href="https://miuxo.in" target="_blank" style="text-decoration: none;">
+        <button style="background: var(--accent); border: 2px solid white;">
+            🌐 Visit miuxo.in
+        </button>
+    </a>
+</div>
 
-        <button type="submit">Send Message</button>
-    </form>
+
+    
+<div class="card">
+    <h3>Miuxoo Smart AI</h3>
+    <div id="ai-chat-box" style="text-align: left; max-height: 200px; overflow-y: auto; background: var(--bg); padding: 10px; border-radius: 8px; margin-bottom: 10px; font-size: 0.9rem;">
+        <p><strong>Gemini:</strong> Hello! I am the Miuxoo AI. How can I help you today?</p>
+    </div>
+    <div style="display: flex; gap: 5px;">
+        <input type="text" id="user-input" placeholder="Type a message..." style="margin:0;">
+        <button id="send-ai-btn" style="width: 80px; margin:0;">Ask</button>
+    </div>
 </div>
 
 <div class="card">
@@ -106,60 +113,21 @@
     </div>
 </div>
 
-<div class="card">
-    <h3>Official Website</h3>
-    <p>Visit us at our custom domain</p>
-    <a href="https://miuxo.in" target="_blank" style="text-decoration: none;">
-        <button style="background: var(--accent); border: 2px solid white;">
-            🌐 Visit miuxo.in
-        </button>
-    </a>
-</div>
 
-<div class="card">
-    <h3>Miuxoo Smart AI</h3>
-    <div id="ai-chat-box" style="text-align: left; max-height: 200px; overflow-y: auto; background: var(--bg); padding: 10px; border-radius: 8px; margin-bottom: 10px; font-size: 0.9rem;">
-        <p><strong>Gemini:</strong> Hello! I am the Miuxoo AI. How can I help you today?</p>
-    </div>
-    <div style="display: flex; gap: 5px;">
-        <input type="text" id="user-input" placeholder="Type a message..." style="margin:0;">
-        <button id="send-ai-btn" style="width: 80px; margin:0;">Ask</button>
-    </div>
-</div>
-
-<script type="module">
-  import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
-
-  // 1. Setup API (REPLACE THE KEY BELOW)
-  const API_KEY = "AIzaSyCKsxEPHYk1HJLLI5UC1mriFQlL7eFPC2U";
-  const genAI = new GoogleGenerativeAI(API_KEY);
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
-  const sendBtn = document.getElementById('send-ai-btn');
-  const chatBox = document.getElementById('ai-chat-box');
-  const userInput = document.getElementById('user-input');
-
-  sendBtn.addEventListener('click', async () => {
-    const text = userInput.value;
-    if (!text) return;
-
-    // Show User Message
-    chatBox.innerHTML += `<p><strong>You:</strong> ${text}</p>`;
-    userInput.value = "";
     
-    // Show Loading
-    const loadingMsg = document.createElement('p');
-    loadingMsg.innerHTML = "<strong>Gemini:</strong> Thinking...";
-    chatBox.appendChild(loadingMsg);
-    chatBox.scrollTop = chatBox.scrollHeight;
+<div class="card">
+    <h3>Contact Me</h3>
+    <form action="https://api.web3forms.com/submit" method="POST">
+        
+        <input type="hidden" name="access_key" value="b1c31134-8e32-4c8a-bdeb-b86ba06e5495">
+        
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+        
+        <input type="hidden" name="from_name" value="Miuxoo App User">
+        <input type="hidden" name="subject" value="New Message from Miuxoo App">
 
-    try {
-      const result = await model.generateContent(text);
-      const response = await result.response;
-      loadingMsg.innerHTML = `<strong>Gemini:</strong> ${response.text()}`;
-    } catch (error) {
-      loadingMsg.innerHTML = "<strong>Gemini:</strong> Error connecting to AI. Check your API key.";
-    }
-    chatBox.scrollTop = chatBox.scrollHeight;
-  });
-</script>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
