@@ -8,8 +8,14 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#2563eb">
     <link rel="apple-touch-icon" href="icon-192.png">
+    <meta name="description" content="Official Miuxo Brand Hub - Shop and Join our Community">
+    
+    <meta property="og:title" content="ᴇᴄᴏʀᴇxᴏ | Official">
+    <meta property="og:description" content="Shop online at Miuxo India and explore AI tools.">
+    <meta property="og:image" content="icon-512.png">
 
     <style>
+        /* Your existing CSS remains here */
         :root {
             --bg: #ffffff;
             --card-bg: #f8fafc;
@@ -88,7 +94,7 @@
         /* Video Styling */
         .video-container {
             position: relative;
-            padding-bottom: 177.77%; /* Vertical 9:16 Ratio */
+            padding-bottom: 177.77%; 
             height: 0;
             border-radius: 12px;
             overflow: hidden;
@@ -115,6 +121,19 @@
     </style>
 </head>
 <body>
+
+<script>
+    // SERVICE WORKER REGISTRATION (Essential for PWA)
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('Service Worker Registered'))
+                .catch(err => console.log('Service Worker Failed', err));
+        });
+    }
+</script>
+</body>
+</html>
 
 <div class="container">
 
