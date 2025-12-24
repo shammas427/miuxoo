@@ -84,6 +84,34 @@
             grid-template-columns: 1fr 1fr;
             gap: 12px;
         }
+
+        /* Video Styling */
+        .video-container {
+            position: relative;
+            padding-bottom: 177.77%; /* Vertical 9:16 Ratio */
+            height: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #000;
+            margin-bottom: 10px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            border: none;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-sizing: border-box;
+            background: var(--bg);
+            color: var(--text);
+        }
     </style>
 </head>
 <body>
@@ -99,6 +127,18 @@
                 🌐  MY WEBSITE
             </button>
         </a>
+    </div>
+
+    <div class="card">
+        <h3>ꜰᴇᴀᴛᴜʀᴇᴅ ꜱʜᴏʀᴛ</h3>
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/u28pkQXq67k" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <p>Boost your Shopify sales with analytics insights.</p>
     </div>
 
     <div class="card">
@@ -142,6 +182,16 @@
                 <button style="background: #E4405F; color: white; margin: 0;">Instagram</button>
             </a>
         </div>
+    </div>
+
+    <div class="card">
+        <h3>ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ</h3>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="YOUR_KEY_HERE">
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="How can I help?" rows="3" required></textarea>
+            <button type="submit" style="background: var(--text); color: var(--bg);">Send Message</button>
+        </form>
     </div>
 
 </div>
