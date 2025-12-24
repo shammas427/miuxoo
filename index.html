@@ -1,154 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ᴇᴄᴏʀᴇxᴏ</title>
-    <link rel="manifest" href="manifest.json">
-    <style>
-        :root {
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text: #1e293b;
-            --accent: #2563eb; /* Dynamic Accent Color */
-        }
+<div class="container">
 
-        [data-theme="dark"] {
-            --bg: #0f172a;
-            --card-bg: #1e293b;
-            --text: #f8fafc;
-        }
-
-        body { 
-            font-family: 'Segoe UI', system-ui, sans-serif; 
-            background: var(--bg); 
-            color: var(--text);
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            transition: 0.3s;
-        }
-
-        .container { width: 90%; max-width: 400px; padding: 20px; }
-        
-        .card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        button {
-            background: var(--accent);
-            color: white;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 0.75rem;
-            cursor: pointer;
-            font-weight: 600;
-            width: 100%;
-            margin-top: 10px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            box-sizing: border-box;
-        }
-
-        .settings-grid { display: flex; gap: 10px; justify-content: center; margin: 15px 0; }
-        .color-dot { width: 30px; height: 30px; border-radius: 50%; cursor: pointer; border: 2px solid white; }
-    </style>
-</head>
-<body>
-
-<div class="card">
-    <h3>ᴍɪᴜxᴏ</h3>
-    <p>ꜱʜᴏᴘ ᴏɴʟɪɴᴇ ᴀᴛ ᴍɪᴜxᴏ ɪɴᴅɪᴀ</p>
-    <a href="https://miuxo.in" target="_blank" style="text-decoration: none;">
-        <button style="background: var(--accent); border: 2px solid white;">
-            🌐 ᴍʏ ᴡᴇʙɪᴛᴇ
-        </button>
-    </a>
-</div>
-
-<div class="card">
-    <h3>ꜱᴜᴘᴇʀᴘʀᴏꜰɪʟᴇ</h3>
-    <p>ɪɴꜱᴛᴀɢʀᴀᴍ ᴀᴜᴛᴏᴍᴀᴛɪᴏɴ</p>
-    <a href="https://superprofile.bio/aimiuxo" target="_blank" style="text-decoration: none;">
-        <button style="background: #000000; display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0; border: 1px solid #333;">
-            <span style="font-size: 1.2rem;">🚀</span>
-             ꜱᴜᴘᴇʀᴘʀᴏꜰɪʟᴇ ᴡᴇʙꜱɪᴛᴇ
-        </button>
-    </a>
-</div>
-
-<div class="card">
-    <h3>ᴠᴇᴇᴅ</h3>
-    <p>ᴀɪ ᴠɪᴅᴇᴏ ᴄʀᴇᴀᴛɪᴏɴ ꜰʀᴇᴇ</p>
-    <a href="https://www.veed.io/tools/ai-video" target="_blank" style="text-decoration: none;">
-        <button style="background: linear-gradient(90deg, #7c3aed 0%, #2563eb 100%); display: flex; align-items: center; justify-content: center; gap: 10px;">
-            <span>🎬</span>
-            ᴠᴇᴇᴅ ᴀɪ ᴡᴇʙꜱɪᴛᴇ
-        </button>
-    </a>
-</div>
-
-<div class="card">
-    <h3>ꜱʜᴏᴘɪꜰʏ</h3>
-    <p>ᴄᴜꜱᴛᴏᴍɪᴢᴇ ʏᴏᴜʀ ꜱᴛᴏʀᴇ ᴡɪᴛʜ ᴏᴜʀ ᴡᴇʙꜱɪᴛᴇ ʙᴜɪʟᴅᴇʀ. ᴛʀᴜꜱᴛᴇᴅ ʙʏ ᴍɪʟʟɪᴏɴꜱ ᴏꜰ ʙᴜꜱɪɴᴇꜱꜱᴇꜱ.
-</p>
-    <a href="https://www.shopify.com/" target="_blank" style="text-decoration: none;">
-        <button style="background: #95bf47; display: flex; align-items: center; justify-content: center; gap: 10px; border: none; box-shadow: 0 4px 14px 0 rgba(149, 191, 71, 0.39);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M18.73 5.41l-1.12-1.23c-.22-.24-.53-.38-.86-.38H7.25c-.33 0-.64.14-.86.38L5.27 5.41c-.17.18-.27.43-.27.69v12.8c0 .61.49 1.1 1.1 1.1h11.8c.61 0 1.1-.49 1.1-1.1V6.1c0-.26-.1-.51-.27-.69zm-6.73 10.49c-1.93 0-3.5-1.57-3.5-3.5h1.5c0 1.1.9 2 2 2s2-.9 2-2h1.5c0 1.93-1.57 3.5-3.5 3.5z"/></svg>
-             ꜱʜᴏᴘɪꜰʏ ᴡᴇʙꜱɪᴛᴇ
-        </button>
-    </a>
-</div>
-    
-<div class="card">
-    <h3>ᴊᴏɪɴ ᴛʜᴇ ᴄᴏᴍᴍᴜɴɪᴛʏ</h3>
-    <p>ꜰᴏʟʟᴏᴡ ꜰᴏʀ ᴅᴀɪʟʏ ᴜᴘᴅᴀᴛᴇꜱ ᴀɴᴅ ᴛᴜᴛᴏʀɪᴀʟꜱ</p>
-    
-    <div style="display: flex; flex-direction: column; gap: 10px;">
-        <a href="https://www.youtube.com/@aimiuxo" target="_blank" style="text-decoration: none;">
-            <button style="background: #FF0000; display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                ʏᴏᴜᴛᴜʙᴇ
-            </button>
-        </a>
-
-        <a href="https://www.instagram.com/aimiuxo/" target="_blank" style="text-decoration: none;">
-            <button style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-4.78 4.618-4.78 4.78-.058 1.28-.072 1.688-.072 4.948s.014 3.668.072 4.948c.2 4.358 4.618 4.78 4.78 4.78 1.28.058 1.688.072 4.948.072s3.668-.014 4.948-.072c4.358-.2 4.78-4.618 4.78-4.78.058-1.28.072-1.688.072-4.948s-.014-3.668-.072-4.948c-.2-4.358-4.618-4.78-4.78-4.78-1.28-.058-1.688-.072-4.948-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                ɪɴꜱᴛᴀɢʀᴀᴍ
+    <div class="card" style="border-top: 5px solid var(--accent);">
+        <h2 style="letter-spacing: 2px;">ᴍɪᴜxᴏ</h2>
+        <p style="font-weight: bold; color: var(--accent);">ᴏꜰꜰɪᴄɪᴀʟ ʙʀᴀɴᴅ ʜᴜʙ</p>
+        <p>ꜱʜᴏᴘ ᴏɴʟɪɴᴇ ᴀᴛ ᴍɪᴜxᴏ ɪɴᴅɪᴀ</p>
+        <a href="https://miuxo.in" target="_blank" style="text-decoration: none;">
+            <button style="background: var(--accent); border: 2px solid white; box-shadow: 0 4px 0 #1e40af;">
+                🌐 ᴠɪꜱɪᴛ ᴍʏ ᴡᴇʙꜱɪᴛᴇ
             </button>
         </a>
     </div>
+
+    <div class="card">
+        <h2 style="letter-spacing: 1px;">ꜱʜᴏᴘɪꜰʏ</h2>
+        <p>ᴘʀᴇᴍɪᴜᴍ ᴅɪɢɪᴛᴀʟ ꜱᴛᴏʀᴇ ʙᴜɪʟᴅᴇʀ</p>
+        <a href="https://www.shopify.com/" target="_blank" style="text-decoration: none;">
+            <button style="background: #95bf47; border: none; box-shadow: 0 4px 0 #5e8e3e;">
+                🛍️ ꜱʜᴏᴘɪꜰʏ ᴡᴇʙꜱɪᴛᴇ
+            </button>
+        </a>
+    </div>
+
+    <div class="card">
+        <h2 style="letter-spacing: 1px;">ꜱᴜᴘᴇʀᴘʀᴏꜰɪʟᴇ</h2>
+        <p>ɪɴꜱᴛᴀɢʀᴀᴍ ᴀᴜᴛᴏᴍᴀᴛɪᴏɴ & ʟɪɴᴋꜱ</p>
+        <a href="https://superprofile.bio/aimiuxo" target="_blank" style="text-decoration: none;">
+            <button style="background: #000000; border: 1px solid #333; box-shadow: 0 4px 0 #222;">
+                🚀 ꜱᴜᴘᴇʀᴘʀᴏꜰɪʟᴇ ᴡᴇʙꜱɪᴛᴇ
+            </button>
+        </a>
+    </div>
+
+    <div class="card">
+        <h2 style="letter-spacing: 1px;">ᴠᴇᴇᴅ ᴀɪ</h2>
+        <p>ꜰʀᴇᴇ ᴀɪ ᴠɪᴅᴇᴏ ᴄʀᴇᴀᴛɪᴏɴ ᴛᴏᴏʟꜱ</p>
+        <a href="https://www.veed.io/tools/ai-video" target="_blank" style="text-decoration: none;">
+            <button style="background: linear-gradient(90deg, #7c3aed 0%, #2563eb 100%); border: none;">
+                🎬 ᴠᴇᴇᴅ ᴀɪ ᴡᴇʙꜱɪᴛᴇ
+            </button>
+        </a>
+    </div>
+
+    <div class="card" style="background: var(--bg); border: 1px dashed #ccc;">
+        <h3>ᴊᴏɪɴ ᴛʜᴇ ᴄᴏᴍᴍᴜɴɪᴛʏ</h3>
+        <div style="display: flex; gap: 10px; margin-top: 15px;">
+            <a href="https://www.youtube.com/@aimiuxo" target="_blank" style="flex: 1; text-decoration: none;">
+                <button style="background: #FF0000; padding: 10px; font-size: 0.8rem;">ʏᴏᴜᴛᴜʙᴇ</button>
+            </a>
+            <a href="https://www.instagram.com/aimiuxo/" target="_blank" style="flex: 1; text-decoration: none;">
+                <button style="background: #E4405F; padding: 10px; font-size: 0.8rem;">ɪɴꜱᴛᴀɢʀᴀᴍ</button>
+            </a>
+        </div>
+    </div>
+
 </div>
-
-
-    
-<div class="card">
-    <h3>ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ</h3>
-    <form action="https://api.web3forms.com/submit" method="POST">
-        
-        <input type="hidden" name="access_key" value="b1c31134-8e32-4c8a-bdeb-b86ba06e5495">
-        
-        <input type="email" name="email" placeholder="ʏᴏᴜʀ ᴇᴍᴀɪʟ" required>
-        <textarea name="message" placeholder="ʏᴏᴜʀ ᴍᴇꜱꜱᴀɢᴇ" rows="4" required></textarea>
-        
-        <input type="hidden" name="from_name" value="Miuxoo App User">
-        <input type="hidden" name="subject" value="New Message from Miuxoo App">
-
-        <button type="submit">Send Message</button>
-    </form>
-</div>
-
